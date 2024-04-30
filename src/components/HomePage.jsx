@@ -6,7 +6,7 @@ const HomePage = () => {
     <div className="home_page">
       {/* text_on the screen */}
       <div className="home_text">
-        <h1>Hello I'am A software Engineer</h1>
+        <h1 style={{ color: "blue" }}>Hello I'am A software Engineer</h1>
         <p>
           I am passionate about building a real world web application programm
           and designing web app.
