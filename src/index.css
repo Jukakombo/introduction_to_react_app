@@ -208,3 +208,16 @@ button {
   width: 100%;
   height: 100%;
 }
+/* loader */
+.loader {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vh;
+  margin: auto;
+  /* background-color: "#fff"; */
+}
+.loader_image {
+  width: 100px;
+  height: 100px;
+}
