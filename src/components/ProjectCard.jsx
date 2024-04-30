@@ -7,7 +7,6 @@ const ProjectCard = ({ donnée }) => {
   const filtre_image = donnée.filter((x) =>
     x.titre.toLowerCase().includes(search.toLowerCase())
   );
-  const x = 5;
 
   return (
     <div>
