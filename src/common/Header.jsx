@@ -22,6 +22,11 @@ const links = [
     titre: "Contact",
     path: "/contact",
   },
+  {
+    _id: "4CRRdkeuieiuedsdRE344",
+    titre: "Admin",
+    path: "/admin",
+  },
 ];
 
 const Header = () => {

@@ -6,6 +6,8 @@ import Project from "./pages/Project";
 import Contact from "./pages/Contact";
 import ProjectDetail from "./components/ProjectDetail";
 import Loader from "./components/Loader";
+import Admin from "./pages/Admin";
+
 const App = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -14,19 +16,23 @@ const App = () => {
       setLoading(false);
     }, 5000);
   }, []);
+
   return (
-    <div>
-      {loading && <Loader />}
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/project" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/project-detail/:id" element={<ProjectDetail />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <>
+      <div>
+        <BrowserRouter>
+          {loading && <Loader />}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/project-detail/:id" element={<ProjectDetail />} />
+            <Route path="/admin" element={<Admin />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </>
   );
 };
 

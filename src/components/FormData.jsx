@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { IoIosSend } from "react-icons/io";
+import axios from "axios";
+//  fetch()
+// axios ...........
 const initialData = {
   name: "",
   email: "",
@@ -12,12 +15,12 @@ const FormData = () => {
   const [formData, setFormData] = useState(initialData);
   const [success, setSucess] = useState(false);
   const { name, email, phone, subject, message } = formData;
-
+  const url = "http://localhost:5000/contacts/create";
   const submitFormData = (e) => {
     e.preventDefault();
     setSucess(true);
-
-    console.log(formData);
+    axios.post(url, formData);
+    // console.log(formData);
     handleCrearForm();
 
     setTimeout(() => {
